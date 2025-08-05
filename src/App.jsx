@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Calculator, TrendingUp, PiggyBank, Menu, X } from 'lucide-react';
+import { AuthProvider } from './components/auth/AuthContext';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+import UserProfile from './components/auth/UserProfile';
 import EMICalculator from './components/EMICalculator';
 import BorrowingCapacity from './components/BorrowingCapacity';
 import PrepaymentCalculator from './components/PrepaymentCalculator';
 
-function App() {
+function AppContent() {
   const [activeTab, setActiveTab] = useState('emi');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -61,14 +64,19 @@ function App() {
               })}
             </nav>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-gray-500 hover:text-gray-700 p-2"
-              >
-                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
+            {/* User Profile & Mobile Menu */}
+            <div className="flex items-center space-x-4">
+              <UserProfile />
+              
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="text-gray-500 hover:text-gray-700 p-2"
+                >
+                  {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -121,6 +129,16 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <AuthProvider>
+      <ProtectedRoute>
+        <AppContent />
+      </ProtectedRoute>
+    </AuthProvider>
   );
 }
 
