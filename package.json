@@ -11,6 +11,7 @@
     "start": "vite"
   },
   "dependencies": {
+    "google-one-tap": "^1.0.6",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.263.1",
     "next-auth": "^4.24.11",
