@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp, PiggyBank, Menu, X } from 'lucide-react';
+import { Calculator, TrendingUp, PiggyBank, Menu, X, User } from 'lucide-react';
 import { AuthProvider } from './components/auth/AuthContext';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UserProfile from './components/auth/UserProfile';
 import EMICalculator from './components/EMICalculator';
 import BorrowingCapacity from './components/BorrowingCapacity';
 import PrepaymentCalculator from './components/PrepaymentCalculator';
+import AboutMe from './components/AboutMe';
 import { getCopyrightText } from './utils/dateUtils';
 
 function AppContent() {
@@ -16,6 +17,7 @@ function AppContent() {
     { id: 'emi', name: 'EMI Calculator', icon: Calculator },
     { id: 'capacity', name: 'Borrowing Capacity', icon: TrendingUp },
     { id: 'prepayment', name: 'Prepayment Benefits', icon: PiggyBank },
+    { id: 'about', name: 'About Me', icon: User },
   ];
 
   const renderActiveComponent = () => {
@@ -26,6 +28,8 @@ function AppContent() {
         return <BorrowingCapacity />;
       case 'prepayment':
         return <PrepaymentCalculator />;
+      case 'about':
+        return <AboutMe />;
       default:
         return <EMICalculator />;
     }
