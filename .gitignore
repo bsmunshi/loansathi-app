@@ -39,3 +39,17 @@ logs
 # Temporary files
 *.tmp
 *.temp
+
+# Security - Never commit these
+*.key
+*.pem
+*.p12
+*.p8
+*secret*
+*password*
+*token*
+.env*
+!.env.example
+
+# Git cleanup files
+cleanup-secrets.sh
