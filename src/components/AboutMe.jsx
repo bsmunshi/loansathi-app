@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Code, Zap, Brain, Coffee, Heart, User } from 'lucide-react';
+import { Github, Mail, Code, Zap, Brain, Coffee, Heart, User } from 'lucide-react';
 
 const AboutMe = () => {
   return (
@@ -12,10 +12,6 @@ const AboutMe = () => {
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
               BM
             </div>
-            {/* Note: Replace with actual LinkedIn photo when available */}
-            <p className="text-xs text-gray-500 text-center mt-2">
-              Connect on LinkedIn for latest photo
-            </p>
           </div>
           
           {/* Profile Info */}
@@ -35,15 +31,6 @@ const AboutMe = () => {
             {/* Social Links */}
             <div className="flex justify-center md:justify-start gap-4 mt-6">
               <a 
-                href="https://linkedin.com/in/bhushanmunshi" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                <Linkedin size={18} />
-                LinkedIn
-              </a>
-              <a 
                 href="https://github.com/bsmunshi" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -53,7 +40,7 @@ const AboutMe = () => {
                 GitHub
               </a>
               <a 
-                href="mailto:bhushan@loansathi.com" 
+                href="mailto:bhushan.munshi@gmail.com" 
                 className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
               >
                 <Mail size={18} />
@@ -231,15 +218,15 @@ const AboutMe = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a 
-            href="https://linkedin.com/in/bhushanmunshi" 
+            href="https://github.com/bsmunshi" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Connect on LinkedIn
+            View My GitHub
           </a>
           <a 
-            href="mailto:bhushan@loansathi.com" 
+            href="mailto:bhushan.munshi@gmail.com" 
             className="px-6 py-3 bg-primary-700 text-white rounded-lg font-semibold hover:bg-primary-800 transition-colors"
           >
             Send an Email
