@@ -4,6 +4,13 @@ A comprehensive loan calculator web application designed specifically for the In
 
 ## Features
 
+### 🔐 Authentication System
+- Google and Apple OAuth login integration
+- Protected routes requiring authentication
+- User profile management with secure sign-out
+- Session persistence across browser sessions
+- Beautiful, mobile-responsive login interface
+
 ### 🧮 EMI Calculator
 - Calculate Equated Monthly Installments for various loan types
 - Support for Home, Personal, Car, and Education loans
