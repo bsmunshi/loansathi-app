@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp, PiggyBank, Menu, X, User } from 'lucide-react';
+import { Calculator, TrendingUp, PiggyBank, Menu, X, User, Home, CreditCard, BarChart3, Shield } from 'lucide-react';
 import { AuthProvider } from './components/auth/AuthContext';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UserProfile from './components/auth/UserProfile';
 import EMICalculator from './components/EMICalculator';
 import BorrowingCapacity from './components/BorrowingCapacity';
 import PrepaymentCalculator from './components/PrepaymentCalculator';
+import HomeAffordabilityCalculator from './components/HomeAffordabilityCalculator';
+import CreditCardCalculator from './components/CreditCardCalculator';
+import SIPCalculator from './components/SIPCalculator';
+import LoanComparisonCalculator from './components/LoanComparisonCalculator';
+import InsuranceCalculator from './components/InsuranceCalculator';
 import AboutMe from './components/AboutMe';
 import { getCopyrightText } from './utils/dateUtils';
 
@@ -17,6 +22,11 @@ function AppContent() {
     { id: 'emi', name: 'EMI Calculator', icon: Calculator },
     { id: 'capacity', name: 'Borrowing Capacity', icon: TrendingUp },
     { id: 'prepayment', name: 'Prepayment Benefits', icon: PiggyBank },
+    { id: 'home', name: 'Home Affordability', icon: Home },
+    { id: 'creditcard', name: 'Credit Card Payoff', icon: CreditCard },
+    { id: 'sip', name: 'SIP Calculator', icon: BarChart3 },
+    { id: 'comparison', name: 'Loan Comparison', icon: BarChart3 },
+    { id: 'insurance', name: 'Insurance Need', icon: Shield },
     { id: 'about', name: 'About Me', icon: User },
   ];
 
@@ -28,6 +38,16 @@ function AppContent() {
         return <BorrowingCapacity />;
       case 'prepayment':
         return <PrepaymentCalculator />;
+      case 'home':
+        return <HomeAffordabilityCalculator />;
+      case 'creditcard':
+        return <CreditCardCalculator />;
+      case 'sip':
+        return <SIPCalculator />;
+      case 'comparison':
+        return <LoanComparisonCalculator />;
+      case 'insurance':
+        return <InsuranceCalculator />;
       case 'about':
         return <AboutMe />;
       default:
